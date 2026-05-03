@@ -1,0 +1,1 @@
+# This program is incharge of reviewing the products sold in a given period of time

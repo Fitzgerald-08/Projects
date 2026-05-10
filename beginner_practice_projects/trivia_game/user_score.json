@@ -1,0 +1,29 @@
+{
+	"user_info": [
+		{
+			"name": "royaldo",
+			"score_history":
+				{
+					"score": [75],
+					"difficulty": ["easy", "medium"]
+				}
+		},
+		{
+			"name": "trixoza",
+			"score_history":
+				{
+					"score": [88],
+					"difficulty": ["medium", "hard"]
+				}
+		},
+		{
+			"name": "cocazo",
+			"score_history":
+				{
+					"score": [99],
+					"difficulty": ["hard", "easy"]
+				}
+		}
+	]
+	
+}

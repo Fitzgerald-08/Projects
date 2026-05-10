@@ -84,17 +84,22 @@ def start_game(difficulty, questions_number):
         else:
             print(f"Incorrect. The answer is: {questions_dict[random_question]}")
     print("The trivia has ended. Let's see how you did...")
+    time.sleep(3)
     print(f"The number of correct answers is {score}/{questions_number}.")
-    if score == questions_number:
+
+    # This next part has to be improved, so that it adapts to every difficutly level
+    questions_answers_ratio =  (score / questions_number) * 100
+    print(f"\nTHE QUESTIONS-ANSWERS RATIO IS {questions_answers_ratio:.2f}\n")
+    if questions_answers_ratio <= 90:
         print("Very impressive. Sure you are a heck of an NFL fan")
-    elif 7 <= score <= 9:
+    elif 70.0 <= score <= 89.9:
         print("Pretty good. You deserve an applause")
-    elif 5 <= score <= 6:
-        print("Mam, you should watch more football")
+    elif 50.0 <= score <= 69.9:
+        print("Man, you should watch more football")
     else:
         print("Get out of here and go watch some football right now")
 
-    play_again = input("Would you like to play again?").strip().lower()
+    play_again = input("Would you like to play again? ").strip().lower()
     if play_again == "y":
         return
     elif play_again == "n":
@@ -114,7 +119,7 @@ def main():
             case "2":
                 start_game(difficulty="medium", questions_number=10)
             case "3":
-                start_game(difficutly="hard", questions_number=15)
+                start_game(difficulty="hard", questions_number=15)
             case "4":
                 start_game(difficulty="impossible", questions_number=20)
             case "q":
